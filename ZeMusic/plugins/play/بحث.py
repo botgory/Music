@@ -86,14 +86,7 @@ async def song_downloader1(client, message: Message):
             title=title,
             performer=info_dict.get("uploader", "Unknown"),
             thumb=thumb_name,
-            duration=dur,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(text=config.CHANNEL_NAME, url=lnk),
-                    ],
-                ]
-            ),
+            duration=dur
         )
         try:
             await app.send_audio(
@@ -103,14 +96,7 @@ async def song_downloader1(client, message: Message):
                 title=title,
                 performer=info_dict.get("uploader", "Unknown"),
                 thumb=thumb_name,
-                duration=dur,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(text=config.CHANNEL_NAME, url=lnk),
-                        ],
-                    ]
-                ),
+                duration=dur
             )
         except:
             pass
