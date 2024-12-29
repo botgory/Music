@@ -82,14 +82,7 @@ async def song_downloader3(client, message: Message):
             title=title,
             performer=info_dict.get("uploader", "Unknown"),
             thumb=thumb_name,
-            duration=dur,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(text=config.CHANNEL_NAME, url=lnk),
-                    ],
-                ]
-            ),
+            duration=dur
         )
 
         try:
@@ -100,14 +93,7 @@ async def song_downloader3(client, message: Message):
                 title=title,
                 performer=info_dict.get("uploader", "Unknown"),
                 thumb=thumb_name,
-                duration=dur,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(text=config.CHANNEL_NAME, url=lnk),
-                        ],
-                    ]
-                ),
+                duration=dur
             )
         except:
             pass
